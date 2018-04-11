@@ -1,0 +1,26 @@
+digraph NeuralNetwork {
+rankdir=LR;
+size="4,3";
+center = true;
+node0 [label="(0) Input", color=black, labelfontcolor=black, fontcolor=black];
+node1 [label="(1) Input", color=black, labelfontcolor=black, fontcolor=black];
+node2 [label="(2) Input", color=black, labelfontcolor=black, fontcolor=black];
+node3 [label="(3) Input", color=black, labelfontcolor=black, fontcolor=black];
+node4 [label="(4) Input", color=black, labelfontcolor=black, fontcolor=black];
+node5 [label="(5) Input", color=black, labelfontcolor=black, fontcolor=black];
+node6 [label="(6) xor", color=lightgrey, labelfontcolor=lightgrey, fontcolor=lightgrey];
+node5 -> node6 [label=" (0)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node2 -> node6 [label=" (1)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node7 [label="(7) and", color=lightgrey, labelfontcolor=lightgrey, fontcolor=lightgrey];
+node4 -> node7 [label=" (0)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node4 -> node7 [label=" (1)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node8 [label="(8) not", color=lightgrey, labelfontcolor=lightgrey, fontcolor=lightgrey];
+node0 -> node8 [label=" (0)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node9 [label="(9) nor", color=lightgrey, labelfontcolor=lightgrey, fontcolor=lightgrey];
+node8 -> node9 [label=" (0)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node5 -> node9 [label=" (1)", labelfontcolor=lightgrey, fontcolor=lightgrey, bold=true, color=lightgrey];
+node10 [label="Output 0", color=black, labelfontcolor=black, fontcolor=black];
+node1 -> node10 [labelfontcolor=black, fontcolor=black, bold=true, color=black];
+{ rank = source; "node0"; "node1"; "node2"; "node3"; "node4"; "node5"; }
+{ rank = max;"node10"; }
+}

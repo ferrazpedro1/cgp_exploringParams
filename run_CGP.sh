@@ -1,4 +1,5 @@
 #!/bin/bash
+#teste edit
 
 echo '************************************************************'
 echo 'Cartesian Genetic Programming - Exploring Parameters        '
